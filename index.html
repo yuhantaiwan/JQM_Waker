@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JQM-HW</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/ad.js"></script>
+	<script src="js/show.js"></script>
+	<script src="js/swipe_panel.js"></script>
+	<style>
+		.ui-listview > li .ui-collapsible-heading {
+			margin: 0;
+		}
+		#product-right-panel h3 {
+			margin-top: 0.5em;
+		}
+		.ui-listview > .ui-li-static {
+    		padding: 0 1em;
+    		background-color: #dddddd;
+		}
+		.ui-panel-inner {
+    		padding: 0.5em 1em 0.5em 1em;
+		}
+		#product-right-panel {
+			width: 20em;
+		}
+		.ui-collapsible.ui-li-static {
+    	padding: 0;
+    	background-color: #dddddd;
+    	border: none !important;
+		}
+	</style>
+</head>
+<body>
+	<!-- index -->
+	<div data-role="page" id="index">
+		<!-- index-left-panel -->
+		<div data-role="panel" id="index-left-panel" data-display="overlay">
+				<ul data-role="listview">
+					<li>
+						<a href="#index">最新消息</a>
+					</li>
+					<li data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+						<h1>活動訊息</h1>
+						<ul data-role="listview">
+							<li><a href="#">公益路走</a></li>
+							<li><a href="#">巡迴講座</a></li>
+							<li><a href="#">國際志工生活節</a></li>
+							<li><a href="#">數位伴讀</a></li>
+							<li><a href="#">領隊訓練</a></li>
+							<li><a href="#">其他活動</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#product">公益購</a>
+					</li>
+					<li>
+						<a href="#about">關於</a>
+					</li>
+				</ul>
+		</div>
+
+		<div data-role="header" data-position="fixed">
+				<a href="#index-left-panel" data-role="button" data-icon="bars" data-iconpos="notext">left-panel</a>
+		</div>
+		<div role="main" class="ui-content">
+			<div class="logo">
+				<a href="https://www.waker.org.tw/Default.aspx" target="_blank">
+					<img src="images/waker/waker01.png" alt="" width="100%">
+				</a>
+			</div>
+			<div class="pro">
+				<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=136" target="_blank" id="adhref">
+					<img src="images/waker/waker_product01.jpg" alt="" width="100%" id="adimg">
+					<p class="text" id="adname">頂級麻質皮革長夾</p>
+				</a>
+			</div>
+			
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><a href="https://www.waker.org.tw/Default.aspx" class="ui-btn ui-btn-b ui-corner-all">微客</a></div>
+				<div class="ui-block-b"><a href="https://www.waker.org.tw/OnePage.aspx?tid=53" class="ui-btn ui-btn-b ui-corner-all">支持</a></div>
+			</div>
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar" data-grid="b">
+				<ul>
+					<li><a href="#index" data-icon="home" class="ui-btn-active ui-state-persist">首頁</a></li>
+					<li><a href="#product" data-icon="shop">公益購</a></li>
+					<li><a href="#about" data-icon="info" data-rel="dialog">關於</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!-- product -->
+	<div data-role="page" id="product">
+		
+		<!-- product-right-panel -->
+		<div data-role="panel" data-position="right" id="product-right-panel" data-display="overlay">
+			<h3>商品一覽</h3>
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="搜尋商品">
+				<li data-role="listview-divider">
+					<h1>產地：柬埔寨</h1>
+				</li>
+				<li>
+					<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=194">
+						<img src="images/waker/waker_product02.jpg" alt="">
+						<h2>碎花束口袋</h2>
+						<p>商品金額：180元</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=190">
+						<img src="images/waker/waker_product06.jpg" alt="">
+						<h2>碎花小物包</h2>
+						<p>商品金額：250元</p>
+					</a>
+				</li>
+				<li data-role="listview-divider">
+					<h1>產地：尼泊爾</h1>
+				</li>
+				<li>
+					<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=41">
+						<img src="images/waker/waker_product05.jpg" alt="">
+						<h2>麻質萬用袋</h2>
+						<p>商品金額：350元</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=136">
+						<img src="images/waker/waker_product01.jpg" alt="">
+						<h2>頂級麻質皮革長夾</h2>
+						<p>商品金額：1,200元</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=167">
+						<img src="images/waker/waker_product03.jpg" alt="">
+						<h2>大地圖騰絲巾</h2>
+						<p>商品金額：650元</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=159">
+						<img src="images/waker/waker_product04.jpg" alt="">
+						<h2>彩虹萬用毯（大披肩）</h2>
+						<p>商品金額：1,500元</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=142">
+						<img src="images/waker/waker_product07.jpg" alt="">
+						<h2>粗條紋絲巾</h2>
+						<p>商品金額：650元</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=160">
+						<img src="images/waker/waker_product08.jpg" alt="">
+						<h2>彩虹斗篷</h2>
+						<p>商品金額：800元</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<h1>公益購</h1>
+			<a href="#" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" id="showprev">back</a>
+			<a href="#" data-role="button" data-icon="carat-r" data-iconpos="notext" data-theme="a" id="shownext">next</a>
+		</div>
+		<div role="main" class="ui-content">
+			<div class="pro">
+				<a href="https://www.waker.org.tw/ShopDetail.aspx?tid=52&id=136" id="prolink" target="_blank">
+					<img src="images/waker/waker_product01.jpg" alt="" width="100%" id="proimg">
+				</a>
+			</div>
+			<p class="text" id="proname">民族刺繡麻質筆袋【限量新品】</p>
+			<!-- collapsible-set -->
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>關於Pucentage公益購</h3>
+					<p>Pucentage為「Pu樸+centage百分比」而來，是由微客設立於海外服務據點的弱勢婦女，這過樸實的雙手一針一線縫紉出對未來的希望，並將這些溫暖的點滴聚積成百分百品質的作品，成為獨一無二的「Pucentage公益購」。</p>
+					<p>Pucentage公益購自2012年創立至今，透過提供海外經濟弱勢者工作機會，讓社會大眾能以透過不一樣的消費選擇，改善弱勢社區脫離貧困的機會，以公平交易精神採取盈餘回熊機制，協助弱勢社區得以持續成長，擁有社區自決的能力。</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>生產者故事--柬埔寨</h3>
+					<p>院長Len本身為孤兒，照顧一群缺乏關愛的孩子，更教導年紀較大的青年學習縫紉，讓他們擁有一技之長，製作能自給自足的作品。並在創作作品的過程中獲得自信與成就感。</p>
+					<p>Sunflower孩子們的作品主要採用碎花布，製作成風格獨特的A4提包、綁帶包、護照套及花布零錢包等，每個作品都繫著孩子的希望，背後都有個故事期待您來聆聽。</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>生產者故事--尼泊爾</h3>
+					<p>
+					羊毛氈系列<br />
+					透過微型貸款成立羊毛氈工坊，教導村莊裡無就業技能的青年女子製作羊毛氈作品，成為家裡經濟來源之一。
+					</p>
+					<p>
+					麻質系列<br />
+					由尼泊爾深山區的少數民族一針一線所編織而成的麻質肩背包、筆袋等生活小物。
+					</p>
+				</div>
+			</div>
+		</div>
+	
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar" data-grid="b">
+				<ul>
+					<li><a href="#index" data-icon="home">首頁</a></li>
+					<li><a href="#product" data-icon="shop" class="ui-btn-active ui-state-persist">公益購</a></li>
+					<li><a href="#about" data-icon="info" data-rel="dialog">關於</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- about -->
+	<div data-role="page" id="about">
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<h1>關於微客</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<p>
+				或許我們沒辦法在這世界上做什麼偉大的事情，但我們可以帶著偉大的愛做一些小事。<br />
+				Maybe we can't do great things on the world, but small things with great love.<br />
+				我們就像是一群微小力量的夥伴，期盼能喚醒自己和角落的人們看見存在的價值，成為彼此生命中無法取代的過客，我們是……微客。<br />
+				One Challenge, One Change給自己一個挑戰，讓他們得著改變<br />
+				因為我們相信每個孩子都應該享有食物、遊戲、受教育和被愛的權利<br />
+				Every child has the right to food, happiness, education and love.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

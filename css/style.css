@@ -1,0 +1,56 @@
+body {
+	font-family: "Microsoft JhengHei";
+}
+
+.logo {
+	margin: 0 auto;
+	width: 30%;
+}
+
+.pro {
+	margin: 0 auto;
+	width: 80%;
+	box-shadow: 4px 4px 4px 2px #888888;
+	border-radius: 20px;
+}
+
+.pro img {
+	border-radius: 20px;
+}
+		
+.text {
+	text-align: center;
+	color: #BB5500;
+	font-size: 1.2em;
+	font-weight: 600;
+}
+a {
+	text-decoration: none;
+}
+
+.ui-listview > li .ui-collapsible-heading {
+	margin: 0;
+}
+
+#product-right-panel h3 {
+	margin-top: 0.5em;
+}
+
+.ui-listview > .ui-li-static {
+		padding: 0 1em;
+		background-color: #dddddd;
+}
+
+.ui-panel-inner {
+		padding: 0.5em 1em 0.5em 1em;
+}
+
+#product-right-panel {
+	width: 20em;
+}
+
+.ui-collapsible.ui-li-static {
+	padding: 0;
+	background-color: #dddddd;
+	border: none !important;
+}
